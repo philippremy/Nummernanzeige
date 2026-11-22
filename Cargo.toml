@@ -1,0 +1,18 @@
+[package]
+name = "nummernanzeige"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+async-channel = { version = "2.5.0", features = [] }
+gpui = { git = "https://github.com/gpui-ce/gpui-ce", package = "gpui-ce", features = [] }
+gpui_platform = { git = "https://github.com/gpui-ce/gpui-ce", package = "gpui_ce_platform", features = [] }
+palette = { version = "0.7.7", features = [] }
+pastey = { version = "0.2.3", features = [] }
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"

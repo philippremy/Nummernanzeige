@@ -1,0 +1,5 @@
+/target
+/tools/min-build/target
+*.exe
+
+!neu-kompilieren.exe
